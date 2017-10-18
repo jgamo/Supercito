@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.t410.supercito.Vistas.AddActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@id/editText1"
+            android:text="Price" />
+
+        <Button
+            android:id="@+id/bSeleccionar"
+            android:text="Seleccionar"
+            android:layout_below="@id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bTomar"
+            android:text="Tomar Foto"
+            android:layout_below="@id/editText2"
+            android:layout_toRightOf="@id/bSeleccionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvUrl"
+        android:text="URL:"
+        android:layout_below="@id/bSeleccionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:id="@+id/ivFoto"
+        android:layout_below="@id/tvUrl"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

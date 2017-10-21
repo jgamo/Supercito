@@ -28,14 +28,14 @@
             android:id="@+id/person_name"
             android:layout_toRightOf="@+id/person_photo"
             android:layout_alignParentTop="true"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
 
         <TextView
             android:id="@+id/person_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="230dp"
+            android:layout_marginLeft="200dp"
             android:textColor="@android:color/holo_blue_light"
 
             android:textSize="20sp" />

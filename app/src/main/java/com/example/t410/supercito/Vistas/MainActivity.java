@@ -36,10 +36,6 @@ public class MainActivity extends AppCompatActivity {
         productos = new ArrayList<Producto>();
         crud = new ProductoCRUD(this);
         productos = crud.getProductos();
-        Log.d("best",String.valueOf(productos.size()));
-        for (int i = 0; i < productos.size(); i++) {
-            Log.d("best",productos.get(i).getId()+"_"+productos.get(i).getNombre()+"_"+productos.get(i).getPrecio()+"_"+productos.get(i).getUrl());
-        }
 
         rv=(RecyclerView)findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -52,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fbAdd = (FloatingActionButton) findViewById(R.id.fb_plus);
         FloatingActionButton fbSuper = (FloatingActionButton) findViewById(R.id.fb_car);
+        FloatingActionButton fbHistorial = (FloatingActionButton) findViewById(R.id.fb_hist);
 
         fbAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +62,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent act = new Intent(MainActivity.this,CurrentSuper.class);
-                //act.putExtra("operacion", "nuevo");
+                startActivity(act);
+            }
+        });
+
+        fbHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent act = new Intent(MainActivity.this,HistorySuper.class);
                 startActivity(act);
             }
         });
@@ -103,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 act.putExtra("precio",productos.get(position).getPrecio());
                 act.putExtra("url",productos.get(position).getUrl());
                 startActivity(act);
-                Toast.makeText(MainActivity.this, "Elemento " + position, Toast.LENGTH_SHORT).show();
             }
         });
         rv.setAdapter(adapter);

@@ -49,7 +49,12 @@
         <activity
             android:name=".Vistas.HistorySuper"
             android:label="@string/title_activity_history_super"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".Vistas.DetallesCompra"
+            android:label="Detalles Compra"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

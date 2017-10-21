@@ -42,16 +42,12 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         holder.productName.setText(product.get(position).getNombre());
-        holder.productPrice.setText(product.get(position).getPrecio());
-        //ImageView imagen = (ImageView) v.findViewById(R.id.imagenItem);
-        //Log.d("animal","entre"+product.get(position).getUrl().toString());
+        holder.productPrice.setText("$"+product.get(position).getPrecio());
             Glide.with(context)
                     .load(product.get(position).getUrl())
                     .crossFade()
                     .centerCrop()
                     .into(holder.productUrl);
-        //Picasso.with(this).load(tvUrl.getText().toString()).into(ivFoto);
-            //holder.personPhoto.setImageResource(R.drawable.loc);
     }
 
     @Override

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.t410.supercito.Vistas.CurrentSuper">
+    tools:context="com.example.t410.supercito.Vistas.DetallesCompra">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -32,17 +32,6 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_current_super"
-        android:id="@+id/include3" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fb_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_margin="@dimen/fab_margin"
-        app:layout_anchor="@+id/include3"
-        app:layout_anchorGravity="top|right"
-        app:srcCompat="@drawable/save" />
+    <include layout="@layout/content_detalles_compras" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -19,16 +19,16 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Name" />
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:layout_below="@id/editText1"
-            android:text="Price" />
+            android:hint="Price" />
 
         <Button
             android:id="@+id/bSeleccionar"

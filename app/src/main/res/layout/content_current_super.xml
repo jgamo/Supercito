@@ -8,10 +8,39 @@
     tools:context="com.example.t410.supercito.Vistas.CurrentSuper"
     tools:showIn="@layout/activity_current_super">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        android:padding="16dp">
 
+        <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edCantidad"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/edCantidad"
+            android:background="@drawable/plus" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv2"
+            android:layout_width="match_parent"
+            android:layout_height="493dp"
+            android:layout_below="@id/edCantidad"
+            android:layout_marginTop="50dp">
+
+        </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

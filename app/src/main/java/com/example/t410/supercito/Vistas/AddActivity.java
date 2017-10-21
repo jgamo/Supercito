@@ -33,6 +33,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -93,8 +94,13 @@ public class AddActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                crud.newProduct(new Producto(tvNombre.getText().toString(), tvPrecio.getText().toString(),tvUrl.getText().toString()));
-                startActivity(new Intent(AddActivity.this, MainActivity.class));
+                if (tvNombre.getText().toString().equals("")||tvPrecio.getText().toString().equals("")||tvPrecio.getText().toString().equals("0")
+                        || tvUrl.getText().toString().equals("URL:")){
+                    Toast.makeText(AddActivity.this, "Debes rellenar los campos, que no sea el precio 0 y elegir imagen: ", Toast.LENGTH_SHORT).show();
+                }else {
+                    crud.newProduct(new Producto(tvNombre.getText().toString(), tvPrecio.getText().toString(), tvUrl.getText().toString()));
+                    startActivity(new Intent(AddActivity.this, MainActivity.class));
+                }
             }
         });
     }

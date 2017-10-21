@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.t410.supercito.Vistas.HistorySuper"
-    tools:showIn="@layout/activity_history_super">
+    tools:context="com.example.t410.supercito.Vistas.DetallesCompra"
+    tools:showIn="@layout/activity_detalles_compras">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,13 +14,11 @@
         android:padding="16dp">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv3"
+            android:id="@+id/rv4"
             android:layout_width="match_parent"
             android:layout_height="493dp"
-            android:layout_below="@id/edCantidad"
             android:layout_marginTop="50dp">
 
         </android.support.v7.widget.RecyclerView>
-    </RelativeLayout>
-
+</RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
